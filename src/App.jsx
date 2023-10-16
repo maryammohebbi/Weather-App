@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import Layout from "./assets/components/Layout"
+import Layout from "./components/Layout"
 
 function App() {
 

@@ -1,13 +1,10 @@
 import React from 'react'
 
-function Weather() {
+function Home() {
   return ( 
-    <section className="bg-slate-400 bg-opacity-40 w-full h-40 rounded-lg p-5 shadow-xl">        
+    <section className="w-full rounded-lg p-5">        
         <Form/>
         <div>
-            {/* <h1>City name</h1>
-            <h2>20 C</h2>
-            <h2>description</h2> */}
             
         </div>
 
@@ -15,7 +12,7 @@ function Weather() {
   )
 }
 
-export default Weather
+export default Home
 
 
 function Form(){

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body{
-    background-color: #adf1ff;
+    background-image: url("./assets/background.jpg") ;
 }
