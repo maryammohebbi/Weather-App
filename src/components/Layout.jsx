@@ -10,7 +10,7 @@ function Layout() {
       <div className="col-span-6 border-b-2 border-slate-400">
         <Header/>
       </div>
-      <div className="hidden lg:block row-span-5 row-start-2  border-r-2 border-slate-400">
+      <div className="hidden lg:block row-span-5 row-start-2 border-r-2 border-slate-400">
         <Nav/>
       </div>
       <div className="col-span-5 row-span-5 row-start-2">
