@@ -1,4 +1,5 @@
 import React from 'react'
+import {MagnifyingGlassCircleIcon} from "@heroicons/react/24/solid"
 
 function Home() {
   return ( 
@@ -15,11 +16,11 @@ export default Home
 
 function Form(){
     return(
-        <form action="submit" className='w-full p-5 flex items-center justify-between gap-x-2'>
+        <form action="submit" className='w-full flex items-center justify-between h-12'>
             <input type="text" placeholder="Type a city name here..."
-            className='flex-1 p-3 bg-blue-50 text-blue-800 rounded-lg shadow-lg'
+            className='flex-1 p-3 bg-blue-50 text-blue-800 rounded-lg shadow-lg h-full'
             />
-            <button className='text-xs font-bold bg-blue-400 text-blue-950 p-4 sm:p-4 rounded-lg shadow-lg'>Search</button>
+            <button> <MagnifyingGlassCircleIcon className='w-14 h-full text-blue-800'/> </button>
         </form>
     )
 }

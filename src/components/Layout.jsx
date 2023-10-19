@@ -13,7 +13,7 @@ function Layout() {
       <div className="hidden lg:block row-span-5 row-start-2 border-r-2 border-slate-400">
         <Nav/>
       </div>
-      <div className="col-span-5 row-span-5 row-start-2 bg-green-100">
+      <div className="col-span-5 row-span-5 row-start-2 mx-auto">
         <Home/>
         <Outlet/>
       </div>
