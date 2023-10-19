@@ -5,7 +5,7 @@ function Home() {
     <section className="w-full rounded-lg p-5">        
         <Form/>
         <Weather/>
-
+        <HourlyForcast/>
     </section>
   )
 }
@@ -38,16 +38,56 @@ function Weather(){
               <div className='w-full text-center'>photo</div>
             </div>
             <div>
-              <span>Thursday - 10 Oct </span>
+              <span>Thursday - 19 Oct </span>
                | 
               <span> Time: 5:06 PM</span>
             </div>
-            <div className='flex justify-between w-full'>
-              <div className='rounded-xl bg-purple-300 p-2 bg-opacity-60'>High: 26</div>
-              <div className='rounded-xl bg-purple-300 p-2 bg-opacity-60'>Low: 20</div>
-              <div className='rounded-xl bg-purple-300 p-2 bg-opacity-60'>Sunrise: 6:00 AM</div>
-              <div className='rounded-xl bg-purple-300 p-2 bg-opacity-60'>Sunset: 6:00 PM</div>
+            <div className='flex flex-wrap justify-between w-full gap-2'>
+              <div className='rounded-xl bg-purple-300 h-9 p-2 text-sm lg:text-base text-center bg-opacity-60'>High: 26</div>
+              <div className='rounded-xl bg-purple-300 h-9 p-2 text-sm lg:text-base text-center bg-opacity-60'>Low: 20</div>
+              <div className='rounded-xl bg-purple-300 h-9 p-2 text-sm lg:text-base text-center bg-opacity-60'>Sunrise: 6:00 AM</div>
+              <div className='rounded-xl bg-purple-300 h-9 p-2 text-sm lg:text-base text-center bg-opacity-60'>Sunset: 6:00 PM</div>
             </div>
         </div>
+  )
+}
+
+function HourlyForcast(){
+  return(
+    <div className='flex flex-col gap-y-4'>
+      <h2 className='font-bold '>Hourly Forcasting:</h2>
+      <div className='flex flex-wrap justify-between gap-2'>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+        <div className='flex flex-col items-center border-2 border-slate-400 rounded-lg p-2'>
+          <span>12:30</span>
+          <span>sun photo</span>
+          <span>26 C</span>
+        </div>
+      </div>
+    </div>
   )
 }
