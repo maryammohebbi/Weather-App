@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom'
 function Nav() {
   return (
     <div>
-        <ul className='flex flex-col gap-y-8 mt-9'>
+        <ul className='flex flex-col gap-y-8 mt-6'>
             <li className=''>
                 <Link to="rasht" className='font-bold border-b-2 border-slate-400 p-3'>Rasht</Link>
             </li>
