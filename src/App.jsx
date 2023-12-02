@@ -2,8 +2,12 @@ import { Toaster } from "react-hot-toast"
 import Home from "./components/Home"
 import Header from "./components/Header"
 import Nav from "./components/Nav"
+import useFetch from "./hooks/useFetch"
 
 function App() {
+  const apiKey = import.meta.env.VITE_API_KEY
+  const apiUrl = import.meta.env.VITE_API_URL
+  const {setQuery, isLoading, weather} = useFetch(apiUrl, apiKey)
 
   return (
     <div>
@@ -13,10 +17,10 @@ function App() {
           <Header/>
         </div>
         <div className="hidden lg:block row-span-5 row-start-2 border-r-2 border-slate-400">
-          <Nav/>
+          <Nav setQuery={setQuery}/>
         </div>
         <div className="col-span-6 lg:col-span-5 row-start-2">
-          <Home/>
+          <Home setQuery={setQuery} isLoading={isLoading} weather={weather}/>
         </div>
       </div>
     </div>

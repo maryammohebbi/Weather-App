@@ -9,7 +9,6 @@ const apiKey = import.meta.env.VITE_API_KEY
 function HourlyForcast() {
 
     const {weather, isLoading} = useFetch(apiHourlyUrl, apiKey)
- 
     // console.log(weather);
 
     if(isLoading) return <Loader/>

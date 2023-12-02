@@ -2,21 +2,12 @@ import React, { useState } from 'react'
 import {MagnifyingGlassCircleIcon} from "@heroicons/react/24/solid"
 import Loader from './Loader'
 import moment from 'moment'
-import useFetch from '../hooks/useFetch'
 import HourlyForcast from './HourlyForcast'
 
-const apiKey = import.meta.env.VITE_API_KEY
-const apiUrl = import.meta.env.VITE_API_URL
-
-function Home() {
-  
-  const {setQuery, isLoading, weather} = useFetch(apiUrl, apiKey)
-
-  // console.log(weather);
-
-
+function Home({setQuery, isLoading, weather}) {
   return ( 
-    <section className="w-full rounded-lg p-5">        
+    <section className="w-full rounded-lg p-5">   
+
         <Form setQuery={setQuery}/>
         {
           isLoading ? <Loader/> : 
@@ -57,12 +48,10 @@ function Form({setQuery}){
 }
 
 function Weather({weather}){
-  // console.log(weather)
   const sunriseTime = weather?.sys?.sunrise;
   const sunsetTime = weather?.sys?.sunset;
   const timeZone = weather?.timezone
   const currentDate = new Date(Date.now() + timeZone * 1000);
-  // const day = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
   const date = currentDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   const formattedSunriseTime = moment.unix(sunriseTime).format('hh:mm A')
   const formattedSunsetTime = moment.unix(sunsetTime).format('hh:mm A')

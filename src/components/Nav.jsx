@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
-import useFetch from '../hooks/useFetch'
 
-function Nav() {
-    const {setQuery, query} = useFetch("https://api.openweathermap.org/data/2.5/weather", "ff2881abc2701f9e9b0bf2a7bb4bbca7") 
+function Nav({setQuery}) {
+
     const handleNavBtn = (title)=> {
         setQuery(title)
     }
-    console.log(query);
 
     const navCities = [
         {
