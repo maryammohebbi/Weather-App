@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
-function useFetch(apiUrl, apiKey) {
+function useFetch(apiUrl, apiKey, isHourly= false, city= "rasht") {
     const [weather, setWeather] = useState({})
     const [query, setQuery] = useState("rasht")
     const [isLoading, setIsLoading] = useState(false)
@@ -14,7 +14,9 @@ function useFetch(apiUrl, apiKey) {
         async function fetchData(){
             setIsLoading(true)
             try{
-                const {data} = await axios.get(`${apiUrl}?q=${query}&appid=${apiKey}`, {signal})            
+                const url = isHourly ? `${apiUrl}?q=${city}&appid=${apiKey}` : `${apiUrl}?q=${query}&appid=${apiKey}`;
+                const { data } = await axios.get(url, { signal });
+                // const {data} = await axios.get(`${apiUrl}?q=${query}&appid=${apiKey}`, {signal})            
                 setWeather(data)
             }
             
@@ -31,7 +33,7 @@ function useFetch(apiUrl, apiKey) {
         return()=>{
             controller.abort()
         }
-    },[query])
+    },[query, apiUrl, apiKey, isHourly, city])
 
   return {weather, query, setQuery, isLoading}
 }

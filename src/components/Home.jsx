@@ -4,7 +4,7 @@ import Loader from './Loader'
 import moment from 'moment'
 import HourlyForcast from './HourlyForcast'
 
-function Home({setQuery, isLoading, weather}) {
+function Home({setQuery, isLoading, weather, hourlyWeather, hourlyIsLoading}) {
   return ( 
     <section className="w-full rounded-lg p-5">   
 
@@ -12,8 +12,8 @@ function Home({setQuery, isLoading, weather}) {
         {
           isLoading ? <Loader/> : 
             <>
-              <Weather weather={weather}/>
-              <HourlyForcast/>
+              <Weather weather={weather} />
+              <HourlyForcast hourlyWeather={hourlyWeather} hourlyIsLoading={hourlyIsLoading}/>
             </>         
         }
     </section>

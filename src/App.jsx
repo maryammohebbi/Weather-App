@@ -9,6 +9,10 @@ function App() {
   const apiUrl = import.meta.env.VITE_API_URL
   const {setQuery, isLoading, weather} = useFetch(apiUrl, apiKey)
 
+const apiHourlyUrl = import.meta.env.VITE_API_URL_HOURLY
+const {weather: hourlyWeather, isLoading: hourlyIsLoading} = useFetch(apiHourlyUrl, apiKey, true, weather.name)
+
+
   return (
     <div>
       <Toaster/>
@@ -20,7 +24,7 @@ function App() {
           <Nav setQuery={setQuery}/>
         </div>
         <div className="col-span-6 lg:col-span-5 row-start-2">
-          <Home setQuery={setQuery} isLoading={isLoading} weather={weather}/>
+          <Home setQuery={setQuery} isLoading={isLoading} weather={weather} hourlyWeather={hourlyWeather} hourlyIsLoading={hourlyIsLoading}/>
         </div>
       </div>
     </div>

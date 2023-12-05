@@ -1,24 +1,19 @@
 import React from 'react'
-import useFetch from '../hooks/useFetch'
 import Loader from './Loader'
 import moment from 'moment'
 
-const apiHourlyUrl = import.meta.env.VITE_API_URL_HOURLY
-const apiKey = import.meta.env.VITE_API_KEY
+function HourlyForcast({hourlyWeather, hourlyIsLoading}) {
 
-function HourlyForcast() {
+    // console.log(hourlyWeather);
 
-    const {weather, isLoading} = useFetch(apiHourlyUrl, apiKey)
-    // console.log(weather);
-
-    if(isLoading) return <Loader/>
+    if(hourlyIsLoading) return <Loader/>
     
         return(
           <div className='flex flex-col gap-y-4'>
             <h2 className='font-bold '>Hourly Forcasting:</h2>
             <div className='flex flex-wrap justify-between gap-2'>
               {
-                weather?.list?.slice(6,12).map(item => {
+                hourlyWeather?.list?.slice(6,12).map(item => {
 
                   const forcastingHour = item.dt
                   const formatForcatingHour = moment.unix(forcastingHour).format('hh:mm A')
