@@ -53,9 +53,9 @@ function Weather({weather}){
   const timeZone = weather?.timezone
   const currentDate = new Date(Date.now() + timeZone * 1000);
   const date = currentDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const formattedSunriseTime = moment.unix(sunriseTime).format('hh:mm A')
-  const formattedSunsetTime = moment.unix(sunsetTime).format('hh:mm A')
-  const formatTimeZone = moment.unix(timeZone).format('hh:mm A')
+  const formattedSunriseTime = moment.unix(sunriseTime).utcOffset(timeZone / 60).format('hh:mm A');
+  const formattedSunsetTime = moment.unix(sunsetTime).utcOffset(timeZone / 60).format('hh:mm A');
+  const formatTimeZone = moment().utcOffset(timeZone / 60).format('hh:mm A');
 
   return (
         <div className='flex flex-col items-center gap-y-4 border-b-2 border-slate-400 py-4'>

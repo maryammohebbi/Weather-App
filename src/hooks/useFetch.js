@@ -14,7 +14,7 @@ function useFetch(apiUrl, apiKey, isHourly= false, city= "rasht") {
         async function fetchData(){
             setIsLoading(true)
             try{
-                const url = isHourly ? `${apiUrl}?q=${city}&appid=${apiKey}` : `${apiUrl}?q=${query}&appid=${apiKey}`;
+                const url = isHourly ? `${apiUrl}?q=${city}&appid=${apiKey}&units=metric` : `${apiUrl}?q=${query}&appid=${apiKey}&units=metric`;
                 const { data } = await axios.get(url, { signal });
                 // const {data} = await axios.get(`${apiUrl}?q=${query}&appid=${apiKey}`, {signal})            
                 setWeather(data)
