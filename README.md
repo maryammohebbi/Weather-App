@@ -1,5 +1,5 @@
 <p>A weather app using react.js and tailwindcss. And also using open weather api</p>
-<p>You can type a city name and get the temprature and other information of weather situation, and also toy can see the hourly forcasting.</p>
+<p>You can type a city name and get the temperature and other information of the weather situation, and also you can see the hourly forecasting.</p>
 <br/>
 <br/>
 
