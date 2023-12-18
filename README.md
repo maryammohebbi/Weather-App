@@ -1,8 +1,33 @@
-# React + Vite
+<p>A todolweather app using react.js and tailwindcss. And also using open weather api</p>
+<p>You can type a city name and get the temprature and other information of weather situation, and also toy can see the hourly forcasting.</p>
+<br/>
+<br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div>
+    <img src="/weather-1.png"/>
+    <br/>
+    <img src="/weather-2.png"/>
+    <br/>
+</div>
 
-Currently, two official plugins are available:
+<br/>
+<br/>
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+<p>
+    Use this command to install all the packages which are used in this project:
+</p>
+<span>
+    npm i
+</span>
+
+<br/>
+<br/>
+
+<p>
+  And also use this command to start the project:
+</p>
+<span>
+    npm run dev
+</span>
