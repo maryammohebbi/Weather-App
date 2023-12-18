@@ -1,10 +1,11 @@
-<p>A todolweather app using react.js and tailwindcss. And also using open weather api</p>
+<p>A weather app using react.js and tailwindcss. And also using open weather api</p>
 <p>You can type a city name and get the temprature and other information of weather situation, and also toy can see the hourly forcasting.</p>
 <br/>
 <br/>
 
 <div>
     <img src="/weather-1.png"/>
+    <br/>
     <br/>
     <img src="/weather-2.png"/>
     <br/>
