@@ -31,3 +31,8 @@
 <span>
     npm run dev
 </span>
+
+<br/>
+<p>
+  Don't forget to get your own api key and api url from open weather api.
+</p>
